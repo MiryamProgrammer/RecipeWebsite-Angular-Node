@@ -17,4 +17,3 @@ RecipeWebsite is a full-stack web application designed to provide users with an 
 * Save favorite recipes for quick access
 * Edit or delete recipes exclusively by their creators or administrators
 * Personal dashboard displaying all saved favorite recipes
-רוצה שאכין לך גם קובץ מוכן לשמירה ולהעלאה?

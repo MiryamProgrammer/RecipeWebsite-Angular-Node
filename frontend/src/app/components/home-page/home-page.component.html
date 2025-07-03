@@ -1,0 +1,15 @@
+
+<div class="cards-container" style="margin-top: 3%;">
+    <div class="card" style="width: 18rem;" *ngFor="let recipe of arrRecipes; trackBy: trackById" dir="rtl">
+        <img [src]="urlImg + recipe.pic" class="card-img-top" [alt]="recipe.name" height="200px">
+        <div class="card-body">
+            <h5 class="card-title">{{ recipe.name }}</h5>
+            <p class="card-text">{{ recipe.description }}</p>
+            <span class="card-level" ><b>רמה:</b>
+                 {{ recipe.level === "hard" ? 3 : recipe.level === "medium" ? 2 : 1}}  </span>
+            <i class="bi" *ngIf ="us.userConnected.length > 0" [ngClass]="us.userConnectedObj?.favorites?.includes(recipe._id) ? 'bi-heart-fill favorite' : 'bi-heart'" ></i>
+            <a [routerLink]="['/more']" [state]="{recipe: recipe}" class="btn ">לצפיה במתכון</a>
+
+        </div>
+    </div>
+</div>

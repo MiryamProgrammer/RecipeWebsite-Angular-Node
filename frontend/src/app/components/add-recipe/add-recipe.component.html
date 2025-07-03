@@ -1,0 +1,59 @@
+  <div class="add-recipe" >
+    <div class="photo-side">
+       <img [src]="urlImg + 'many.jpg'" class="card-img-top"  width="50%"  >
+    </div>
+   
+   <div class="form-side" >
+        <div class="outer-div" >
+<form class="form">
+  <div class="mb-3">
+    <label  class="form-label">שם מתכון:</label>
+    <input type="text" class="form-control" id="exampleInputName" [(ngModel)]="newRecipe.name" name="recipeName" required>
+  </div>
+  <div class="mb-3">
+    <label for="inputDescription" class="form-label">תיאור:</label>
+    <input type="text" class="form-control" id="inputDescription" [(ngModel)] = "newRecipe.description" name="description" required>
+  </div>
+   <div class="mb-3">
+    <label for="exampleInputLevel" class="form-label">רמה:</label>
+    <select class="form-control" id="exampleInputLevel" [(ngModel)] = "newRecipe.level" name="level"  required>
+      <option value="easy">קל</option>
+      <option value="medium">בינוני</option>
+      <option value="hard">קשה</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputType" class="form-label">סוג מתכון:</label>
+     <select class="form-control" id="exampleInputType" [(ngModel)] = "newRecipe.type" name="type"  required>
+      <option value="חלבי">חלבי</option>
+      <option value="בשרי">בשרי</option>
+      <option value="פרווה">פרווה</option>
+    </select>
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputDuration" class="form-label"> זמן הכנה: </label>
+    <input type="text" class="form-control" id="exampleInputDuration" [(ngModel)] = "newRecipe.duration" name="duration" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputIngrediants" class="form-label">מצרכים : </label>
+    <input type="text" class="form-control" id="exampleInputIngrediants" [(ngModel)] = "name" name="ingredientName" placeholder="שם מצרך" required>
+    <input type="number" class="form-control" id="exampleInputIngrediants" [(ngModel)] = "amount" name="ingredientAmount"  placeholder="כמות מצרך" required>
+    <br>
+    <button type="button" class="btn" (click)="addIngredient()">הוסף מצרך</button>
+  </div>
+<div class="mb-3">
+    <label for="exampleInputPic" class="form-label"> העלאת תמונה </label>
+    <input type="text" class="form-control" id="exampleInputPic" [(ngModel)] = "newRecipe.pic" name="image" required>
+  </div>
+     <!-- נסיון להעלת תמונה עם multer <div class="mb-3">
+    <label for="exampleInputPic" class="form-label"> העלאת תמונה </label>
+    <input type="file" class="form-control" id="exampleInputPic" (change)="onFileSelected($event)" name="image" required>
+  </div> -->
+  <br>
+  <button type="button" class="btn btn-primary"(click)="addRecipe()" >הוסף מתכון</button>
+  <br> 
+  <a type="button" class="reset" (click)="resetForm()">איפוס הטופס</a>  
+</form>
+</div> 
+
+ </div>

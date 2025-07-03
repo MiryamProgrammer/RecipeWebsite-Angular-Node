@@ -1,0 +1,30 @@
+.card{
+    display: block;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    padding-right: 6%;
+    
+}
+.card-title{
+    text-align: center;
+    color: rgb(1, 53, 31) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.backhome{
+    color: rgb(1, 53, 31) !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+
+.btn-primary{
+    background-color: rgb(1, 53, 31) !important;
+    border: none;
+}
+.btn-primary:hover{
+    background-color: rgba(1, 53, 31, 0.742) !important;
+}

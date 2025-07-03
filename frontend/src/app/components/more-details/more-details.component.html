@@ -1,0 +1,25 @@
+
+    <div class="card"  dir="rtl">
+        <img [src]="urlImg + recipe.pic" class="card-img-top" [alt]="recipe.name" >
+        <div class="card-body">
+            <h5 class="card-title">{{ recipe.name }} </h5>
+            
+            <p class="card-text">{{ recipe.description }}</p>
+            <p class="card-level" ><b>רמה:</b>
+                 {{ recipe.level === "hard" ? 3 : recipe.level === "medium" ? 2 : 1}}  </p>
+            <p class="card-duration" ><b>זמן הכנה:</b>  {{recipe.duration}} </p>
+            <p class="card-type" ><b>סוג מאכל:</b> {{recipe.type}}</p>
+            <p class="card-ingredients" ><b>מצרכים:</b> 
+                <ul>
+                @for( r of recipe.ingredients; track $index ) {
+                    <li> {{r.amount}} {{r.name}}</li>
+                 }   
+                </ul>
+            <button  type="button" class="btn btn-primary" *ngIf="us.userConnectedObj" (click)="addFavorite(recipe._id)" >הוספת מתכון זה למתכונים המועדפים</button>
+
+                <div dir="ltr">
+                    <a class="backhome" routerLink="/home">חזרה לדף הבית</a>
+                </div>
+
+        </div>
+    </div>

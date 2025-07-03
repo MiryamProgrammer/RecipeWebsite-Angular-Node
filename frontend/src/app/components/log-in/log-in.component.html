@@ -1,0 +1,18 @@
+<div class="outer-div" >
+<form class="form">
+  <div class="mb-3">
+    <label  class="form-label">שם משתמש:</label>
+    <input type="text" class="form-control" id="exampleInputName" [(ngModel)]="userName" name="userName" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">סיסמא:</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)] = "userPassword" name="userPassword" required>
+  </div>
+  <button type="button" class="btn btn-primary"(click)="logIn()" >התחבר</button>
+  <br> <br>
+  <div class="mb-3 form-check">
+    <label class="noRegister" >עוד לא רשום?  </label>
+    <a class="noRegisterA" routerLink="/register"> הרשם!</a>
+  </div>
+</form>
+</div>

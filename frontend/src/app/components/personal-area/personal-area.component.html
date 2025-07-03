@@ -1,0 +1,21 @@
+<div class="outer-div"> 
+  <button type="submit" class="btn" (click)="logOut()" >יציאה</button>
+</div>
+
+<div>
+  <p class="card-title">המתכונים שלי</p>
+  <div class="cards-container" style="margin-top: 3%;">
+    <div class="card" style="width: 18rem;" *ngFor="let recipe of arrRecipes; trackBy: trackById" dir="rtl">
+        <img [src]="urlImg + recipe.pic" class="card-img-top" [alt]="recipe.name" height="200px">
+        <div class="card-body">
+            <h5 class="card-title">{{ recipe.name }}</h5>
+            <p class="card-text">{{ recipe.description }}</p>
+            <span class="card-level" ><b>רמה:</b>
+                 {{ recipe.level === "hard" ? 3 : recipe.level === "medium" ? 2 : 1}}  </span>
+            <a [routerLink]="['/more']" [state]="{recipe: recipe}" class="btn btn-primary">לצפיה במתכון</a>
+
+        </div>
+    </div>
+</div>
+
+</div>

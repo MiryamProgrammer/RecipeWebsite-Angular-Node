@@ -1,0 +1,41 @@
+.outer-div {
+    margin: 5%;
+    padding: 4%;
+    border-radius: 10px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+}
+.form{
+    direction: rtl;
+}
+.btn-primary{
+    background-color: rgb(1, 53, 31) !important;
+    border: none;
+}
+.btn-primary:hover{
+    background-color: rgba(1, 53, 31, 0.742) !important;
+}
+.noRegister{
+    font-size: 12px;
+    color: rgb(1, 53, 31);
+    text-decoration: none;
+}
+.noRegisterA{
+    font-size: 12px;
+    color: rgb(1, 53, 31);
+    text-decoration: none;
+}
+.noRegisterA:hover{
+    font-weight: 600;
+}
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #01351f60;
+    border-color: inherit
+}
+button:focus, button:active,
+a:focus, a:active {
+    outline: none;
+    box-shadow: none;
+    color: rgb(1, 53, 31) !important;
+    background-color: rgb(255,255,255) !important;
+}

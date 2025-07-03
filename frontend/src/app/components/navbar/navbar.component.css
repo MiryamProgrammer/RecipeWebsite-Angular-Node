@@ -1,0 +1,9 @@
+.nav-link {
+    color: rgb(1, 53, 31) !important;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3rem;
+}
+.left-nav {
+    margin-right: auto;
+}
